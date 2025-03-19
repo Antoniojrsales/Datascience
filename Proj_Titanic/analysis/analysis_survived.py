@@ -1,9 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def contar_sobreviventes(df):
+def contar_sobreviventes(df_titanic):
     """Agrupa e conta os sobreviventes."""
-    agrupando_survived = df['Survived'].value_counts()
+    agrupando_survived = df_titanic['Survived'].value_counts()
     agrupando_survived.index = ['Não Sobreviveram', 'Sobreviveram']
     return agrupando_survived
 
@@ -21,17 +21,17 @@ def criar_grafico_barras(agrupando_survived):
 
 def calcular_porcentagem_sobreviventes(df, agrupando_survived):
     """Calcula e exibe a porcentagem de sobreviventes."""
-    total = len(df)
+    total = len(df_titanic)
     porcentagem_nao_sobreviveu = (agrupando_survived[0] / total) * 100
     porcentagem_sobreviveu = (agrupando_survived[1] / total) * 100
     print(f'Porcentagem de Não Sobreviventes: {porcentagem_nao_sobreviveu:.2f}%')
     print(f'Porcentagem de Sobreviventes: {porcentagem_sobreviveu:.2f}%')
 
-def analisar_survived(df):
+def analisar_survived(df_titanic):
     """Analisa a coluna 'Survived'."""
-    agrupando_survived = contar_sobreviventes(df)
+    agrupando_survived = contar_sobreviventes(df_titanic)
     criar_grafico_barras(agrupando_survived)
-    calcular_porcentagem_sobreviventes(df, agrupando_survived)
+    calcular_porcentagem_sobreviventes(df_titanic, agrupando_survived)
 
 if __name__ == "__main__":
     try:

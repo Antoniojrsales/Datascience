@@ -1,0 +1,1 @@
+def calcular_porcentagem_sobreviventes(df, agrupando_survived):
