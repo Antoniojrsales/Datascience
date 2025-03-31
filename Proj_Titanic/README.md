@@ -39,6 +39,26 @@ A maioria dos passageiros (55.11%) estavam na Primeira classe.
 * *Passageiros da Terceira Classe tiveram a menor taxa de sobrevivência.*
 * *A coluna 'Pclass' tem uma forte correlação com a coluna 'Fare' (tarifa).*
 
+## Análise da Coluna 'Sex'
+
+A coluna 'Sex' indica o sexo do passageiro (Masculino ou Feminino). O sexo foi um fator determinante na sobrevivência durante o desastre do Titanic.
+
+### Distribuição
+
+A maioria dos passageiros (64.76%) eram do sexo Masculino.
+
+![Gráfico de barras da contagem de sobreviventes](img/gráfico_sexo_contagem.png)
+
+### Taxa de Sobrevivência Geral
+
+* Feminino: 74.20%
+* Masculino: 18.89%
+
+### Insights Principais
+
+* *As mulheres tiveram uma taxa de sobrevivência significativamente maior do que os homens.*
+* *Os homens tiveram uma taxa de sobrevivência muito baixa, indicando a gravidade do desastre para esse grupo.*
+
 ### Próximos Passos
 
 * Analisar outras colunas do conjunto de dados.

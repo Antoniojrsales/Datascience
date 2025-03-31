@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def contar_sobreviventes(df_titanic):
+def contar_sobreviventes_pclass(df_titanic):
     """Agrupa e conta os passageiros por classe."""
     agrupando_pclass = df_titanic['Pclass'].value_counts()
     agrupando_pclass.index = ['Primeira classe', 'Segunda classe', 'Terceira classe']
@@ -19,7 +19,7 @@ def criar_grafico_barras(agrupando_pclass):
         plt.text(i, v + 5, str(v), ha='center', fontsize=10)
     plt.show()
 
-def calcular_porcentagem_sobreviventes(df_titanic, agrupando_pclass):
+def calcular_porcentagem_sobreviventes_pclass(df_titanic, agrupando_pclass):
     """Calcula e exibe a porcentagem de passageiros por classe."""
     total = len(df_titanic)
     porcentagem_classe1 = (agrupando_pclass[0] / total) * 100
@@ -31,9 +31,9 @@ def calcular_porcentagem_sobreviventes(df_titanic, agrupando_pclass):
 
 def analisar_pclass(df_titanic):
     """Analisa a coluna 'Pclass'."""
-    agrupando_pclass = contar_sobreviventes(df_titanic)
+    agrupando_pclass = contar_sobreviventes_pclass(df_titanic)
     criar_grafico_barras(agrupando_pclass)
-    calcular_porcentagem_sobreviventes(df_titanic, agrupando_pclass)
+    calcular_porcentagem_sobreviventes_pclass(df_titanic, agrupando_pclass)
 
 if __name__ == "__main__":
     try:
